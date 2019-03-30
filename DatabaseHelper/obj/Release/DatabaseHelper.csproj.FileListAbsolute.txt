@@ -1,0 +1,11 @@
+E:\项目资料\报表系统\ProjectCode\DocumentManageSystem\DatabaseHelper\bin\Release\DatabaseHelper.dll.config
+E:\项目资料\报表系统\ProjectCode\DocumentManageSystem\DatabaseHelper\bin\Release\DatabaseHelper.dll
+E:\项目资料\报表系统\ProjectCode\DocumentManageSystem\DatabaseHelper\bin\Release\DatabaseHelper.pdb
+E:\项目资料\报表系统\ProjectCode\DocumentManageSystem\DatabaseHelper\obj\Release\DatabaseHelper.csprojAssemblyReference.cache
+E:\项目资料\报表系统\ProjectCode\DocumentManageSystem\DatabaseHelper\obj\Release\Interop.ADOX.dll
+E:\项目资料\报表系统\ProjectCode\DocumentManageSystem\DatabaseHelper\obj\Release\DatabaseHelper.csproj.ResolveComReference.cache
+E:\项目资料\报表系统\ProjectCode\DocumentManageSystem\DatabaseHelper\obj\Release\DatabaseHelper.Resource1.resources
+E:\项目资料\报表系统\ProjectCode\DocumentManageSystem\DatabaseHelper\obj\Release\DatabaseHelper.csproj.GenerateResource.cache
+E:\项目资料\报表系统\ProjectCode\DocumentManageSystem\DatabaseHelper\obj\Release\DatabaseHelper.csproj.CoreCompileInputs.cache
+E:\项目资料\报表系统\ProjectCode\DocumentManageSystem\DatabaseHelper\obj\Release\DatabaseHelper.dll
+E:\项目资料\报表系统\ProjectCode\DocumentManageSystem\DatabaseHelper\obj\Release\DatabaseHelper.pdb

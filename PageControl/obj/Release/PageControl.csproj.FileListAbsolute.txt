@@ -1,0 +1,7 @@
+E:\项目资料\报表系统\ProjectCode\DocumentManageSystem\PageControl\bin\Release\PageControl.dll
+E:\项目资料\报表系统\ProjectCode\DocumentManageSystem\PageControl\bin\Release\PageControl.pdb
+E:\项目资料\报表系统\ProjectCode\DocumentManageSystem\PageControl\obj\Release\PageControl.PagerControl.resources
+E:\项目资料\报表系统\ProjectCode\DocumentManageSystem\PageControl\obj\Release\PageControl.csproj.GenerateResource.cache
+E:\项目资料\报表系统\ProjectCode\DocumentManageSystem\PageControl\obj\Release\PageControl.csproj.CoreCompileInputs.cache
+E:\项目资料\报表系统\ProjectCode\DocumentManageSystem\PageControl\obj\Release\PageControl.dll
+E:\项目资料\报表系统\ProjectCode\DocumentManageSystem\PageControl\obj\Release\PageControl.pdb

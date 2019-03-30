@@ -1,0 +1,34 @@
+<MTSScene Version="308">
+<!-- Viewpoint Experience Technology scene description file.				 -->
+<MTSTimeElem Name="mySmoothZoom" Type="MTSZoomView" On="1" PreAnimator="1" 
+BaseName="Icon_img/Icon.mzv"
+	ImageSize="1200 800"
+	TileSize="256" Overlap="1"
+></MTSTimeElem>
+
+
+	<MTSAction Name="ZoomPan">
+		<MTSSetProperty Target="mySmoothZoom::DelU" Value="dx" /> 
+		<MTSSetProperty Target="mySmoothZoom::DelV" Value="dy" /> 
+		<MTSSetProperty Target="mySmoothZoom::Del0" Value="1"  />
+	</MTSAction>
+
+	<MTSAction Name="ZoomAnimIn">
+		<MTSSetProperty Target="mySmoothZoom::ScrX" Value="x" />
+		<MTSSetProperty Target="mySmoothZoom::ScrY" Value="y" />
+		<MTSSetProperty Target="mySmoothZoom::IncZ" Value="z" /> 
+		<MTSSetProperty Target="mySmoothZoom::TimT" Value="1" />
+	</MTSAction>
+
+	<MTSAction Name="ZoomAnimOut">
+		<MTSSetProperty Target="mySmoothZoom::IncZ" Value="z" /> 
+		<MTSSetProperty Target="mySmoothZoom::TimT" Value="1" />
+	</MTSAction>
+
+	<MTSInteractor Name="MTSCameraNavi">
+		<RemoveStates /> 
+		<MTSHandle Event="MouseLeftDown"	Action="ZoomAnimIn"   z="2"  x="MTSEvent::ucrd" y="MTSEvent::vcrd"/>	
+		<MTSHandle Event="MouseRightDown"	Action="ZoomAnimOut"  z="-2" /> 
+		<MTSHandle Event="MouseDrag"		Action="ZoomPan" dx="MTSEvent::_dx_" dy="MTSEvent::_dy_"/> 
+	</MTSInteractor>
+</MTSScene>
