@@ -5,3 +5,11 @@ E:\项目资料\报表系统\ProjectCode\DocumentManageSystem\PageControl\obj\Re
 E:\项目资料\报表系统\ProjectCode\DocumentManageSystem\PageControl\obj\Release\PageControl.csproj.CoreCompileInputs.cache
 E:\项目资料\报表系统\ProjectCode\DocumentManageSystem\PageControl\obj\Release\PageControl.dll
 E:\项目资料\报表系统\ProjectCode\DocumentManageSystem\PageControl\obj\Release\PageControl.pdb
+E:\项目资料\报表系统\ProjectCode20190321lf\ProjectCode20190321lf\DocumentManageSystem\PageControl\bin\Release\PageControl.dll
+E:\项目资料\报表系统\ProjectCode20190321lf\ProjectCode20190321lf\DocumentManageSystem\PageControl\bin\Release\PageControl.pdb
+E:\项目资料\报表系统\ProjectCode20190321lf\ProjectCode20190321lf\DocumentManageSystem\PageControl\obj\Release\PageControl.csprojAssemblyReference.cache
+E:\项目资料\报表系统\ProjectCode20190321lf\ProjectCode20190321lf\DocumentManageSystem\PageControl\obj\Release\PageControl.PagerControl.resources
+E:\项目资料\报表系统\ProjectCode20190321lf\ProjectCode20190321lf\DocumentManageSystem\PageControl\obj\Release\PageControl.csproj.GenerateResource.cache
+E:\项目资料\报表系统\ProjectCode20190321lf\ProjectCode20190321lf\DocumentManageSystem\PageControl\obj\Release\PageControl.csproj.CoreCompileInputs.cache
+E:\项目资料\报表系统\ProjectCode20190321lf\ProjectCode20190321lf\DocumentManageSystem\PageControl\obj\Release\PageControl.dll
+E:\项目资料\报表系统\ProjectCode20190321lf\ProjectCode20190321lf\DocumentManageSystem\PageControl\obj\Release\PageControl.pdb

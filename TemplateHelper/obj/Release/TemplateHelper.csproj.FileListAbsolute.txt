@@ -7,3 +7,5 @@ E:\项目资料\报表系统\ProjectCode\DocumentManageSystem\TemplateHelper\obj
 E:\项目资料\报表系统\ProjectCode\DocumentManageSystem\TemplateHelper\obj\Release\TemplateHelper.dll
 E:\项目资料\报表系统\ProjectCode\DocumentManageSystem\TemplateHelper\obj\Release\TemplateHelper.pdb
 E:\项目资料\报表系统\ProjectCode\DocumentManageSystem\TemplateHelper\obj\Release\TemplateHelper.csprojAssemblyReference.cache
+E:\项目资料\报表系统\ProjectCode20190321lf\ProjectCode20190321lf\DocumentManageSystem\TemplateHelper\obj\Release\TemplateHelper.csproj.ResolveComReference.cache
+E:\项目资料\报表系统\ProjectCode20190321lf\ProjectCode20190321lf\DocumentManageSystem\TemplateHelper\obj\Release\TemplateHelper.csproj.CoreCompileInputs.cache
