@@ -286,7 +286,7 @@ namespace DocumentManageSystem
 
                         #region 删除报表类型
                         ToolStripButton itemRemoveMode = new ToolStripButton();
-                        itemRemoveMode.Text = "删除报表类型";
+                        itemRemoveMode.Text = "删除文件夹";
                         itemRemoveMode.Click += (obj, ee) =>
                         {
                             if (MessageBox.Show("确认要删除此报表类型？删除后，该报表类型下的所有表及数据将丢失", "提示", MessageBoxButtons.YesNo) != DialogResult.Yes)
@@ -421,7 +421,7 @@ namespace DocumentManageSystem
         private void tv_Table_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             TreeNode node = tv_Table.GetNodeAt(e.Location);
-            if (node != null && node.Nodes.Count == 0)
+            if (node != null && node.Nodes.Count == 0 && node.Parent != null)
             {
                 tv_Table.SelectedNode = node;
                 this.dataEditPanel1.TableName = node.Name;
