@@ -594,5 +594,20 @@ namespace DocumentManageSystem
             DeviceCareWarnForm dcwf = new DeviceCareWarnForm();
             dcwf.ShowDialog();
         }
+
+        private void 帮助ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void 法律法规ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start(@"Help\法律法规.chm");
+        }
+
+        private void 使用说明ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start(@"Help\安全生产管理系统使用说明书.doc");
+        }
     }
 }
