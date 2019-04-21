@@ -415,11 +415,15 @@ namespace DatabaseHelper
         }
         public int InsertIntoTableRecordDoc(string tableName, int recordID, byte[] bytes,string fileName, string userName)
         {
-            Dictionary<string, byte[]> files = new Dictionary<string, byte[]>();
-            string strSQL = "Insert into 文档表 values ((select ID from 报表目录 where 报表名称=N'" + tableName + "')," + recordID + ",N'" + fileName +
-                "',@image,N'" + userName + "','" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "')";
-            files.Add("@image", bytes);
-            int iResult = connector.Excute(strSQL, files);
+            List<SqlParameter> parameters = new List<SqlParameter>();
+            string strSQL = "Insert into 文档表 values ((select ID from 报表目录 where 报表名称=@tableName),@recordID,@fileName,@image,@userName,@dateTime)";
+            parameters.Add(new SqlParameter("@tableName", tableName));
+            parameters.Add(new SqlParameter("@recordID", recordID));
+            parameters.Add(new SqlParameter("@fileName", fileName));
+            parameters.Add(new SqlParameter("@userName", userName));
+            parameters.Add(new SqlParameter("@dateTime", DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")));
+            parameters.Add(new SqlParameter("@image", bytes));
+            int iResult = connector.Excute(strSQL, parameters.ToArray());
             if (iResult > 0)
             {
                 string sResult = connector.QueryStrReturn("select ident_current('文档表')").ToString();

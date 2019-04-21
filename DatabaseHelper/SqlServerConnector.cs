@@ -15,7 +15,7 @@ namespace DatabaseHelper
             if(connectionString!="")
             base.connector = new SqlConnection(connectionString);
         }
-        public override int Excute(string sql, Dictionary<string, byte[]> files, bool bTran = false)
+        public override int Excute(string sql, Dictionary<string, object> files, bool bTran = false)
         {
             SqlCommand cmd = null;
             try
@@ -23,8 +23,8 @@ namespace DatabaseHelper
                 cmd = new SqlCommand(sql, (SqlConnection)connector);
                 foreach (string key in files.Keys)
                 {
-                    cmd.Parameters.Add(key, SqlDbType.Image);
-                    cmd.Parameters[key].Value = files[key];
+                    cmd.Parameters.Add(new SqlParameter(key, files[key]));
+                    //cmd.Parameters[key].Value = files[key];
                 }
                 connector.Open();
                 if (bTran)

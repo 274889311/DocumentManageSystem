@@ -99,7 +99,19 @@ namespace DatabaseHelper
             {
                 if (tf.Name == fieldName)
                 {
-                    tf.Value = value;
+                    if(fieldName.Contains("日期") || fieldName.Contains("时间"))
+                    {
+                        DateTime dt;
+                        if (!DateTime.TryParse(value, out dt))
+                        {
+                            var times = value.Split(' ');
+                            tf.Value = string.Join(" ", times.Except(times.Where(t => t.Contains("星期"))).ToArray());
+                        }
+                        else
+                            tf.Value = dt.ToString("yyyy-MM-dd HH:mm:ss");
+                    }
+                    else
+                        tf.Value = value;
                     break;
                 }
             }

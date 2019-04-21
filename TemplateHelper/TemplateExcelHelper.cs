@@ -110,6 +110,8 @@ namespace TemplateHelper
                     for (int j = 0; j < dt.Columns.Count; j++)
                     {
                         workSheet.Cells[4, j + 1] = dt.Columns[j].ColumnName;
+                        workBook.Names.Add(dt.Columns[j].ColumnName, workSheet.Cells[4, j + 1]);//, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing);
+                        //workBook.Names.Item(dt.Columns[j].ColumnName).RefersTo = workSheet.get_Range(workSheet.Cells[4, j + 1]);
                     }
                     Microsoft.Office.Interop.Excel.Range newExpenseTypeRange = workSheet.get_Range(workSheet.Cells[1, 1], workSheet.Cells[3, dt.Columns.Count]);
                     newExpenseTypeRange.Merge(workSheet.get_Range(workSheet.Cells[1, 1], workSheet.Cells[3, dt.Columns.Count]).MergeCells);//合并单元格
@@ -120,7 +122,10 @@ namespace TemplateHelper
                     {
                         for (int j = 0; j < dt.Columns.Count; j++)
                         {
-                            workSheet.Cells[i + 5, j + 1] = dt.Rows[i][j];//项目序号
+                            if (dt.Rows[i][j].GetType().Equals(typeof(DateTime)))
+                                workSheet.Cells[i + 5, j + 1] = ((DateTime)(dt.Rows[i][j])).ToString("yyyy-MM-dd HH:mm:ss");
+                            else
+                                workSheet.Cells[i + 5, j + 1] = dt.Rows[i][j];//项目序号
                         }
                     }
                     WorkSheetPageSet(xlApp, workSheet);
@@ -260,7 +265,13 @@ namespace TemplateHelper
                         int row = workBook.Names.Item(k).RefersToRange.Row;
                         int col = workBook.Names.Item(k).RefersToRange.Column;
                         //newRow[k-1] = workSheet.Cells[row + i + 1, col].ToString();
-                        newRow[k - 1] = Convert.ToString(workSheet.get_Range(workSheet.Cells[i , col], workSheet.Cells[i , col]).Value2);
+                        var value = workSheet.get_Range(workSheet.Cells[i, col], workSheet.Cells[i, col]).Value;
+                        if(value.GetType().Equals(typeof(DateTime)))
+                        {
+                            newRow[k - 1] = ((DateTime)value).ToString("yyyy-MM-dd HH:mm:ss");
+                        }
+                        else
+                            newRow[k - 1] = Convert.ToString(workSheet.get_Range(workSheet.Cells[i , col], workSheet.Cells[i , col]).Value);
                     }
                     dataTableResult.Rows.Add(newRow);
                 }

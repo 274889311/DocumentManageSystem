@@ -13,7 +13,7 @@ namespace DatabaseHelper
         object QueryStrReturn(string sql);
         DataTable Query(string sql);
         int Excute(string sql, SqlParameter[] parameters = null, bool bTran = false);
-        int Excute(string sql, Dictionary<string, byte[]> files, bool bTran = false);
+        int Excute(string sql, Dictionary<string, object> files, bool bTran = false);
         bool IsTableExists(string strTableName);
         TableField[] GetFieldMark(string tableName);
         void SetFieldMark(string tableName, string tableDiscript, TableField[] fields);

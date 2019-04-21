@@ -576,7 +576,7 @@ namespace DocumentManageSystem
             BaseFieldTable fieldTable = new BaseFieldTable(dataTable.TableName);
             foreach (DataColumn col in dataTable.Columns)
             {
-                fieldTable.AddField(new TableField() { Name = col.ColumnName, Value = "" });
+                fieldTable.AddField(new TableField() { Name = col.ColumnName, Value = "",Type =col.DataType.ToString() });
             }
             foreach (DataRow row in dataTable.Rows)
             {

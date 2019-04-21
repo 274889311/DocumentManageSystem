@@ -658,11 +658,20 @@ namespace DMSComponent
             {
                 if (dataGridView1.SelectedRows.Count == 0 || this.TableName == "") return;
                 IFieldTable table = GetFieldTable(row);
-                CreateFromField(table,null, WorkingStateEnum.Editting, true);
+                if (this.TableName.Contains("制度"))
+                {
+                    CreateFromField(table, null, WorkingStateEnum.Editting, false);
+                }
+                else
+                    CreateFromField(table, null, WorkingStateEnum.Editting, true);
+
 
             };
-            if (!this.TableName.Contains("制度"))
-                cms.Items.Add(itemUpload);
+            if (this.TableName.Contains("制度"))
+            {
+                itemUpload.Text = "文档管理";
+            }
+            cms.Items.Add(itemUpload);
 
             return cms;
         }

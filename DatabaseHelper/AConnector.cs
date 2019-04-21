@@ -18,7 +18,7 @@ namespace DatabaseHelper
         protected IDataReader dataReader = null;
         protected IDbTransaction transaction = null;
         protected static string ErrorMessage = "";
-        public abstract int Excute(string sql, Dictionary<string, byte[]> files, bool bTran = false);
+        public abstract int Excute(string sql, Dictionary<string, object> files, bool bTran = false);
         public int Excute(string sql, SqlParameter[] parameters = null, bool bTran = false)
         {
             try
