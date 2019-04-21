@@ -29,7 +29,7 @@ namespace SystemWindows
         public static string RealName = "User";
 
 
-        Dictionary<string, string> UserDatas;
+        Dictionary<string, string> UserDatas = new Dictionary<string, string>();
         private void bt_OK_Click(object sender, EventArgs e)
         {
             DatabaseHelper.DBHelper helper = DatabaseHelper.DBHelper.GetDBHelper();

@@ -266,19 +266,26 @@ namespace TemplateHelper
                         int col = workBook.Names.Item(k).RefersToRange.Column;
                         //newRow[k-1] = workSheet.Cells[row + i + 1, col].ToString();
                         var value = workSheet.get_Range(workSheet.Cells[i, col], workSheet.Cells[i, col]).Value;
-                        if(value.GetType().Equals(typeof(DateTime)))
+                        if(value==null)
                         {
-                            newRow[k - 1] = ((DateTime)value).ToString("yyyy-MM-dd HH:mm:ss");
+                            value = workSheet.get_Range(workSheet.Cells[i, col], workSheet.Cells[i, col]).Value2;
                         }
-                        else
-                            newRow[k - 1] = Convert.ToString(workSheet.get_Range(workSheet.Cells[i , col], workSheet.Cells[i , col]).Value);
+                        if (value != null)
+                        {
+                            if (value.GetType().Equals(typeof(DateTime)))
+                            {
+                                newRow[k - 1] = ((DateTime)value).ToString("yyyy-MM-dd HH:mm:ss");
+                            }
+                            else
+                                newRow[k - 1] = Convert.ToString(value);
+                        }
                     }
                     dataTableResult.Rows.Add(newRow);
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Excel导出失败，错误：" + ex.Message, "提示信息", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Excel导入失败，错误：" + ex.Message, "提示信息", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 xlApp.Quit();
             }
             finally

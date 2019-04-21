@@ -555,11 +555,19 @@ namespace DocumentManageSystem
 
         private void 数据导入ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
 
-            if (dataEditPanel1.TableName == "") return;
+
+            if (dataEditPanel1.TableName == "")
+            {
+                MessageBox.Show("请在报表树中选择要导入的表");
+                return;
+            }
             TreeNode tn = tv_Table.Nodes.Find(dataEditPanel1.TableName, true).Where(t => t.Nodes.Count == 0).FirstOrDefault();
-            if (tn==null || tn.Parent == null) return;
+            if (tn == null || tn.Parent == null||tn.Tag == null)
+            {
+                MessageBox.Show("请在报表树中选择要导入的表");
+                return;
+            }
             ITemplateHelper templateHelper = ATemplateHelper.GetTemplateHelper(tn.Parent.Text, dataEditPanel1.TableName);
 
             string Filter = "Excel文件|*.xls|Excel文件|*.xlsx";
@@ -572,6 +580,11 @@ namespace DocumentManageSystem
 
             if (openFileDialog1.ShowDialog() != DialogResult.OK)
                 return;
+            if(!openFileDialog1.FileName.Contains(dataEditPanel1.TableName))
+            {
+                MessageBox.Show("您选择的数据导入模板不正确，请重新选择！");
+                return;
+            }
             DataTable dataTable = templateHelper.InPut(dataEditPanel1.TableName, openFileDialog1.FileName);
             BaseFieldTable fieldTable = new BaseFieldTable(dataTable.TableName);
             foreach (DataColumn col in dataTable.Columns)
