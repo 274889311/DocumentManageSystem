@@ -7,7 +7,7 @@
     <ProjectGuid>{98800612-49D0-46CD-8B81-811729C59BEB}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>SystemCodeCreater</RootNamespace>
-    <AssemblyName>SystemCodeCreater</AssemblyName>
+    <AssemblyName>注册码生成器</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -18,7 +18,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>..\BIN\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
