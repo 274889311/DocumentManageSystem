@@ -23,7 +23,7 @@ namespace SystemWindows
         public static EnumDatabaseType DatabaseType = EnumDatabaseType.SqlFile;
         private void cb_db_Type_SelectedIndexChanged(object sender, EventArgs e)
         {
-            ConnectString = CommonConfigurationManager.GetAppConfig("ConnectString");
+            ConnectString = AES.GetDecryptConnectString(CommonConfigurationManager.GetAppConfig("ConnectString"));
             string[] sqlStrArray = null;
             if(ConnectString!=null && ConnectString.Contains(";"))
                 sqlStrArray = ConnectString.Split(';');
@@ -77,7 +77,7 @@ namespace SystemWindows
 
         private void SystemSettingForm_Load(object sender, EventArgs e)
         {
-            ConnectString = CommonConfigurationManager.GetAppConfig("ConnectString");
+            ConnectString = AES.GetDecryptConnectString(CommonConfigurationManager.GetAppConfig("ConnectString"));
             cb_db_Type.SelectedIndex = 0;
         }
 
@@ -111,7 +111,7 @@ namespace SystemWindows
 
             if (DBHelper.GetDBHelper(DatabaseType).TestDBConnect(ConnectString))
             {
-                CommonConfigurationManager.UpdateAppConfig("ConnectString", ConnectString);
+                CommonConfigurationManager.UpdateAppConfig("ConnectString", AES.GetEncryptConnectString(ConnectString));
                 this.DialogResult = DialogResult.OK;
             }
             else

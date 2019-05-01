@@ -183,7 +183,7 @@ namespace SystemWindows
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(300, 46);
             this.label3.TabIndex = 0;
-            this.label3.Text = "安全生产管理系统";
+            this.label3.Text = "平安工地管理系统";
             // 
             // UserLogin
             // 

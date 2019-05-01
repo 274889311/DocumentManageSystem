@@ -128,6 +128,11 @@ namespace DocumentManageSystem
                 MessageBox.Show("请输入字段名");
                 return;
             }
+            if(tb_Caption.Text[0]<=64)
+            {
+                MessageBox.Show("不能字母或汉字以外的字符做为字段开头！");
+                return;
+            }
             TableField tf = new TableField()
             {
                 Name = tb_Caption.Text,
@@ -221,6 +226,17 @@ namespace DocumentManageSystem
             {
                 if (tnf.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                 {
+                    if (tnf.TableName.Trim() == "")
+                    {
+                        MessageBox.Show("请输入表名");
+                        continue;
+                    }
+                    if (tnf.TableName[0] <= 64)
+                    {
+                        MessageBox.Show("不能字母或汉字以外的字符做为表名开头！");
+                        continue;
+                    }
+
                     if (helper.ExistTable(tnf.TableName))
                     {
                         if (IsCopy)

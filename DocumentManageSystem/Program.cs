@@ -19,6 +19,11 @@ namespace DocumentManageSystem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            if (!SystemCodeForm.CheckSystemCode())
+            {
+                if (new SystemCodeForm().ShowDialog() == DialogResult.Cancel)
+                    return;
+            }
             if (new UserLogin().ShowDialog() == DialogResult.OK)
             {
                 Application.Run(new MainForm());

@@ -55,6 +55,8 @@ namespace DMSComponent
             Brush textBrush = new SolidBrush(Color.Blue);
             foreach(var kv in FileNames.Where(f=>f.Key!= "背景"))
             {
+                if (index > ButtonBoxes.Count - 1)
+                    break;
                 Rectangle rect = ButtonBoxes[index];
 
                 if (rect.Contains(this.PointToClient(MousePosition)))

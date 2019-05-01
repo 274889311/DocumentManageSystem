@@ -89,18 +89,22 @@ namespace SystemWindows
             this.DialogResult = System.Windows.Forms.DialogResult.Cancel;
         }
 
+
         private void UserLogin_Load(object sender, EventArgs e)
         {
             SystemSettingForm.DatabaseType = EnumDatabaseType.SqlServer;
             //string connectString = Properties.Settings.Default["DocMngDBConnectionString"].ToString();
-            string connectString = CommonConfigurationManager.GetAppConfig("ConnectString");
+
+            string connectString =AES.GetDecryptConnectString(CommonConfigurationManager.GetAppConfig("ConnectString"));
             if (connectString == null 
                 || !DatabaseHelper.DBHelper.GetDBHelper(SystemSettingForm.DatabaseType).TestDBConnect(connectString))
             {
                 SystemSettingForm ssf = new SystemSettingForm();
                 if (ssf.ShowDialog() == DialogResult.OK)
                 {
-                    CommonConfigurationManager.UpdateAppConfig("ConnectString", ssf.ConnectString);
+                    connectString = AES.GetEncryptConnectString(ssf.ConnectString);
+                    var str = AES.GetDecryptConnectString(connectString);
+                    CommonConfigurationManager.UpdateAppConfig("ConnectString", connectString);
                     Application.Restart();
 
                 }
