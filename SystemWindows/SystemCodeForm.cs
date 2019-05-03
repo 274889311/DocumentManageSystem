@@ -24,18 +24,35 @@ namespace SystemWindows
         public static bool CheckSystemCode()
         {
             string systemCode = CommonConfigurationManager.GetAppConfig("SystemCode");
-            return AES.AESEncrypt(SystemInformationCode.GetCpuID() + "zhangdahagn").Equals(systemCode);
+            if (systemCode.Trim() == "")
+                return false;
+            try
+            {
+                return AES.AESDecrypt(systemCode).Equals(SystemInformationCode.GetCpuID() + "zhangdahang");
+            }
+            catch(Exception ex)
+            {
+
+            }
+            return false;
         }
 
         private void bt_OK_Click(object sender, EventArgs e)
         {
-            string systemCode = AES.AESEncrypt(SystemInformationCode.GetCpuID() + "zhangdahagn");
-            if (systemCode.Equals(textBox2.Text))
+            string systemCode = AES.AESEncrypt(SystemInformationCode.GetCpuID() + "zhangdahang");
+            try
             {
-                CommonConfigurationManager.UpdateAppConfig("SystemCode", systemCode);
-                this.DialogResult = DialogResult.OK;
+                if (AES.AESDecrypt(textBox2.Text).Equals(SystemInformationCode.GetCpuID() + "zhangdahang"))
+                {
+                    CommonConfigurationManager.UpdateAppConfig("SystemCode", textBox2.Text);
+                    this.DialogResult = DialogResult.OK;
+                }
+                else
+                {
+                    MessageBox.Show("您输入的注册码不正确，请重新输入！");
+                }
             }
-            else
+            catch
             {
                 MessageBox.Show("您输入的注册码不正确，请重新输入！");
             }

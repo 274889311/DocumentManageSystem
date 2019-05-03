@@ -16,6 +16,7 @@ namespace SystemCodeCreater
         public CodeCreaterForm()
         {
             InitializeComponent();
+            this.bt_OK.Click += bt_OK_Click;
         }
         private void bt_OK_Click(object sender, EventArgs e)
         {
@@ -25,13 +26,14 @@ namespace SystemCodeCreater
             }
             else
             {
-                textBox2.Text = AES.AESEncrypt(textBox1.Text + "zhangdahagn");
+                textBox2.Text = AES.AESEncrypt(textBox1.Text + "zhangdahang");
             }
         }
 
         private void bt_Cancel_Click(object sender, EventArgs e)
         {
-            this.DialogResult = DialogResult.Cancel;
+            this.DialogResult = DialogResult.OK;
+            this.Close();
         }
     }
 }

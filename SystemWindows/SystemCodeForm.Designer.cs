@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.bt_Cancel = new System.Windows.Forms.Button();
+            this.bt_OK = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.bt_Cancel = new System.Windows.Forms.Button();
-            this.bt_OK = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
@@ -59,6 +59,46 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.Size = new System.Drawing.Size(348, 102);
             this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.AutoSize = true;
+            this.tableLayoutPanel2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.tableLayoutPanel2.ColumnCount = 2;
+            this.tableLayoutPanel1.SetColumnSpan(this.tableLayoutPanel2, 2);
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Controls.Add(this.bt_Cancel, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.bt_OK, 1, 0);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 51);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 1;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(342, 48);
+            this.tableLayoutPanel2.TabIndex = 1;
+            // 
+            // bt_Cancel
+            // 
+            this.bt_Cancel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bt_Cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.bt_Cancel.Location = new System.Drawing.Point(48, 12);
+            this.bt_Cancel.Name = "bt_Cancel";
+            this.bt_Cancel.Size = new System.Drawing.Size(75, 23);
+            this.bt_Cancel.TabIndex = 0;
+            this.bt_Cancel.Text = "取    消";
+            this.bt_Cancel.UseVisualStyleBackColor = true;
+            // 
+            // bt_OK
+            // 
+            this.bt_OK.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bt_OK.Location = new System.Drawing.Point(219, 12);
+            this.bt_OK.Name = "bt_OK";
+            this.bt_OK.Size = new System.Drawing.Size(75, 23);
+            this.bt_OK.TabIndex = 0;
+            this.bt_OK.Text = "确    定";
+            this.bt_OK.UseVisualStyleBackColor = true;
+            this.bt_OK.Click += new System.EventHandler(this.bt_OK_Click);
             // 
             // label1
             // 
@@ -101,45 +141,6 @@
             this.textBox2.Size = new System.Drawing.Size(285, 21);
             this.textBox2.TabIndex = 1;
             // 
-            // tableLayoutPanel2
-            // 
-            this.tableLayoutPanel2.AutoSize = true;
-            this.tableLayoutPanel2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.tableLayoutPanel2.ColumnCount = 2;
-            this.tableLayoutPanel1.SetColumnSpan(this.tableLayoutPanel2, 2);
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Controls.Add(this.bt_Cancel, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.bt_OK, 1, 0);
-            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 51);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 1;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(342, 48);
-            this.tableLayoutPanel2.TabIndex = 1;
-            // 
-            // bt_Cancel
-            // 
-            this.bt_Cancel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.bt_Cancel.Location = new System.Drawing.Point(48, 12);
-            this.bt_Cancel.Name = "bt_Cancel";
-            this.bt_Cancel.Size = new System.Drawing.Size(75, 23);
-            this.bt_Cancel.TabIndex = 0;
-            this.bt_Cancel.Text = "取    消";
-            this.bt_Cancel.UseVisualStyleBackColor = true;
-            // 
-            // bt_OK
-            // 
-            this.bt_OK.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.bt_OK.Location = new System.Drawing.Point(219, 12);
-            this.bt_OK.Name = "bt_OK";
-            this.bt_OK.Size = new System.Drawing.Size(75, 23);
-            this.bt_OK.TabIndex = 0;
-            this.bt_OK.Text = "确    定";
-            this.bt_OK.UseVisualStyleBackColor = true;
-            this.bt_OK.Click += new System.EventHandler(this.bt_OK_Click);
-            // 
             // SystemCodeForm
             // 
             this.AcceptButton = this.bt_OK;
@@ -155,6 +156,7 @@
             this.Name = "SystemCodeForm";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "注册序列号";
             this.Load += new System.EventHandler(this.SystemCodeForm_Load);
             this.tableLayoutPanel1.ResumeLayout(false);

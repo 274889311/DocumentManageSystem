@@ -70,7 +70,7 @@ namespace SystemWindows
         private void bt_OK_Click(object sender, EventArgs e)
         {
             DatabaseHelper.DBHelper helper = DatabaseHelper.DBHelper.GetDBHelper();
-            helper.Excute("update TableUser set Password = " + textBox3.Text + " where UserName='" + UserLogin.UserName + "'");
+            helper.Excute("update 用户表 set 密码 = " + textBox3.Text + " where 用户名='" + UserLogin.UserName + "'");
             this.DialogResult = System.Windows.Forms.DialogResult.OK;
         }
 
