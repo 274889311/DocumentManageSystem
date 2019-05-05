@@ -15,6 +15,12 @@
     {
         "Entry"
         {
+        "MsmKey" = "8:_001A1EDF68974369BA31AEC704052351"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_021528C750E49766904031DE54413C07"
         "OwnerKey" = "8:_FBE77392AF1A44B8A5CE18AD9193CF35"
         "MsmSig" = "8:_UNDEFINED"
@@ -23,12 +29,6 @@
         {
         "MsmKey" = "8:_021528C750E49766904031DE54413C07"
         "OwnerKey" = "8:_32448E2FE8C6EE1816EF808FFD985BD0"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_04C93E9DAC074930AB479D4D6DA75E9A"
-        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -63,13 +63,19 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_08F34BB7EF95426A84564CB262997074"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_0C3C5FBC125D4900AF9EEB24EC4D97AC"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_0F195286EDEA4737BBF44F1E0C841F5E"
+        "MsmKey" = "8:_0C77399664A8476A84C50440465AF5E1"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -87,13 +93,13 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_1920C050ECEA4308A28EC8E59614D834"
+        "MsmKey" = "8:_1456AC7A72FB4D8198EF50E5BA5949A2"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_1AF5DE17DEDE48D092939B2D8E9D67AD"
+        "MsmKey" = "8:_1920C050ECEA4308A28EC8E59614D834"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -111,7 +117,19 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_22D177598C834A628CD7DE1360428E40"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_2A7DC8763CDA410680ED6687E8D40D7F"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_2E240032A4D14429BF6BADD99FC884D4"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -125,6 +143,12 @@
         {
         "MsmKey" = "8:_2FF1907B3C74D0D471851BC3692E520F"
         "OwnerKey" = "8:_FBE77392AF1A44B8A5CE18AD9193CF35"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_2FFFB5ACBD5F4AD3987C9951DD4D8DB6"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -201,12 +225,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_3D52E6418BF74C4CBF9328CE3B914BB5"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_3F0B7CA0F8E3438BAC2CFA935BEE4F41"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -267,18 +285,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_5917E837F743456784A75B4B94403E22"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_6E51565A94B1477CA69FC0ECF388F436"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_6F429CB12F1E4F7D947FDD6517A9336D"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -286,6 +292,12 @@
         "Entry"
         {
         "MsmKey" = "8:_6F963B9BB52A40CCA1F595539596F2BF"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_72B7005340FC43FAB71AFFF933F5CD30"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -303,13 +315,13 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_78E13F166F684047BED6AD2A67CA2051"
+        "MsmKey" = "8:_77FCB2C604FE4815B06391FEC1EC1B51"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_78F78D7CD9C4456AA1FCF765C2917EB8"
+        "MsmKey" = "8:_78E13F166F684047BED6AD2A67CA2051"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -322,12 +334,6 @@
         "Entry"
         {
         "MsmKey" = "8:_7D788C8ACA9144E9A14FE5E41789F503"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_7F94CFCB9DD84ACC94C12E60D446E4B4"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -358,12 +364,6 @@
         "Entry"
         {
         "MsmKey" = "8:_93FB627BF72B409AA5A879F684C7A69F"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_9DEBA559EFA349F4A0DC08B39586CAA3"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -429,18 +429,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_B7FC9351B13C43589CEFAF994BC30B96"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_B8E2E57AFB4040C1900FFA9E757F2FBB"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_BC17CB38168B4BA2AE02BC36DC31A34F"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -466,6 +454,18 @@
         "Entry"
         {
         "MsmKey" = "8:_C870CF708EC94DB99886A0722D4815DD"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_C958C87152294339A79B4478FBEB458F"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_CF7B0DDD03BE4185A331EF621D652CD2"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -754,6 +754,26 @@
         }
         "File"
         {
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_001A1EDF68974369BA31AEC704052351"
+            {
+            "SourcePath" = "8:..\\DMSComponent\\Images\\安全检查及隐患排查.jpg"
+            "TargetName" = "8:安全检查及隐患排查.jpg"
+            "Tag" = "8:"
+            "Folder" = "8:_4AC70A7CC73B47D7A0BC584055081664"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_021528C750E49766904031DE54413C07"
             {
             "AssemblyRegister" = "3:1"
@@ -783,26 +803,6 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_04C93E9DAC074930AB479D4D6DA75E9A"
-            {
-            "SourcePath" = "8:..\\BIN\\Images\\人员管理.jpg"
-            "TargetName" = "8:人员管理.jpg"
-            "Tag" = "8:"
-            "Folder" = "8:_4AC70A7CC73B47D7A0BC584055081664"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_06833B0997514ABE80535EAB10AA48A4"
@@ -856,6 +856,26 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_08F34BB7EF95426A84564CB262997074"
+            {
+            "SourcePath" = "8:..\\DMSComponent\\Images\\项目信息.jpg"
+            "TargetName" = "8:项目信息.jpg"
+            "Tag" = "8:"
+            "Folder" = "8:_4AC70A7CC73B47D7A0BC584055081664"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_0C3C5FBC125D4900AF9EEB24EC4D97AC"
             {
             "SourcePath" = "8:..\\BIN\\TableTemplate\\施工单位平安工地考核评价表Template.txt"
@@ -876,10 +896,10 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_0F195286EDEA4737BBF44F1E0C841F5E"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_0C77399664A8476A84C50440465AF5E1"
             {
-            "SourcePath" = "8:..\\BIN\\Images\\技术管理.jpg"
-            "TargetName" = "8:技术管理.jpg"
+            "SourcePath" = "8:..\\DMSComponent\\Images\\安全教育培训.jpg"
+            "TargetName" = "8:安全教育培训.jpg"
             "Tag" = "8:"
             "Folder" = "8:_4AC70A7CC73B47D7A0BC584055081664"
             "Condition" = "8:"
@@ -927,12 +947,12 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_1920C050ECEA4308A28EC8E59614D834"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_1456AC7A72FB4D8198EF50E5BA5949A2"
             {
-            "SourcePath" = "8:..\\BIN\\RDLC\\设备维修保养记录表.rdlc"
-            "TargetName" = "8:设备维修保养记录表.rdlc"
+            "SourcePath" = "8:..\\DMSComponent\\Images\\安全生产费用.jpg"
+            "TargetName" = "8:安全生产费用.jpg"
             "Tag" = "8:"
-            "Folder" = "8:_B86CBCA9292342668F36E3BE81C58032"
+            "Folder" = "8:_4AC70A7CC73B47D7A0BC584055081664"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -947,12 +967,12 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_1AF5DE17DEDE48D092939B2D8E9D67AD"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_1920C050ECEA4308A28EC8E59614D834"
             {
-            "SourcePath" = "8:..\\BIN\\Images\\项目信息.jpg"
-            "TargetName" = "8:项目信息.jpg"
+            "SourcePath" = "8:..\\BIN\\RDLC\\设备维修保养记录表.rdlc"
+            "TargetName" = "8:设备维修保养记录表.rdlc"
             "Tag" = "8:"
-            "Folder" = "8:_4AC70A7CC73B47D7A0BC584055081664"
+            "Folder" = "8:_B86CBCA9292342668F36E3BE81C58032"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -1007,12 +1027,52 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_22D177598C834A628CD7DE1360428E40"
+            {
+            "SourcePath" = "8:..\\DMSComponent\\Images\\人员管理.jpg"
+            "TargetName" = "8:人员管理.jpg"
+            "Tag" = "8:"
+            "Folder" = "8:_4AC70A7CC73B47D7A0BC584055081664"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_2A7DC8763CDA410680ED6687E8D40D7F"
             {
             "SourcePath" = "8:..\\BIN\\RDLC\\机械设备管理登记表.rdlc"
             "TargetName" = "8:机械设备管理登记表.rdlc"
             "Tag" = "8:"
             "Folder" = "8:_B86CBCA9292342668F36E3BE81C58032"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_2E240032A4D14429BF6BADD99FC884D4"
+            {
+            "SourcePath" = "8:..\\DMSComponent\\Images\\应急管理.jpg"
+            "TargetName" = "8:应急管理.jpg"
+            "Tag" = "8:"
+            "Folder" = "8:_4AC70A7CC73B47D7A0BC584055081664"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -1056,6 +1116,26 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_2FFFB5ACBD5F4AD3987C9951DD4D8DB6"
+            {
+            "SourcePath" = "8:..\\DMSComponent\\Images\\安全生产管理制度.jpg"
+            "TargetName" = "8:安全生产管理制度.jpg"
+            "Tag" = "8:"
+            "Folder" = "8:_4AC70A7CC73B47D7A0BC584055081664"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_31AC4EEF092348FDB7FE780848CFC92D"
@@ -1262,26 +1342,6 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_3D52E6418BF74C4CBF9328CE3B914BB5"
-            {
-            "SourcePath" = "8:..\\BIN\\Images\\安全生产机构及人员.jpg"
-            "TargetName" = "8:安全生产机构及人员.jpg"
-            "Tag" = "8:"
-            "Folder" = "8:_4AC70A7CC73B47D7A0BC584055081664"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_3F0B7CA0F8E3438BAC2CFA935BEE4F41"
             {
             "SourcePath" = "8:..\\BIN\\RDLC\\劳动防护用品发放记录表.rdlc"
@@ -1444,46 +1504,6 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_5917E837F743456784A75B4B94403E22"
-            {
-            "SourcePath" = "8:..\\BIN\\Images\\培训与应急.jpg"
-            "TargetName" = "8:培训与应急.jpg"
-            "Tag" = "8:"
-            "Folder" = "8:_4AC70A7CC73B47D7A0BC584055081664"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6E51565A94B1477CA69FC0ECF388F436"
-            {
-            "SourcePath" = "8:..\\BIN\\Images\\特种设备.jpg"
-            "TargetName" = "8:特种设备.jpg"
-            "Tag" = "8:"
-            "Folder" = "8:_4AC70A7CC73B47D7A0BC584055081664"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6F429CB12F1E4F7D947FDD6517A9336D"
             {
             "SourcePath" = "8:..\\BIN\\RDLC\\安全教育培训记录表.rdlc"
@@ -1510,6 +1530,26 @@
             "TargetName" = "8:特种作业人员台账.rdlc"
             "Tag" = "8:"
             "Folder" = "8:_B86CBCA9292342668F36E3BE81C58032"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_72B7005340FC43FAB71AFFF933F5CD30"
+            {
+            "SourcePath" = "8:..\\DMSComponent\\Images\\技术管理.jpg"
+            "TargetName" = "8:技术管理.jpg"
+            "Tag" = "8:"
+            "Folder" = "8:_4AC70A7CC73B47D7A0BC584055081664"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -1564,12 +1604,12 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_78E13F166F684047BED6AD2A67CA2051"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_77FCB2C604FE4815B06391FEC1EC1B51"
             {
-            "SourcePath" = "8:..\\BIN\\RDLC\\消防设施设备使用登记表.rdlc"
-            "TargetName" = "8:消防设施设备使用登记表.rdlc"
+            "SourcePath" = "8:..\\DMSComponent\\Images\\特种设备管理.jpg"
+            "TargetName" = "8:特种设备管理.jpg"
             "Tag" = "8:"
-            "Folder" = "8:_B86CBCA9292342668F36E3BE81C58032"
+            "Folder" = "8:_4AC70A7CC73B47D7A0BC584055081664"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -1584,12 +1624,12 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_78F78D7CD9C4456AA1FCF765C2917EB8"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_78E13F166F684047BED6AD2A67CA2051"
             {
-            "SourcePath" = "8:..\\BIN\\Images\\分类管理.jpg"
-            "TargetName" = "8:分类管理.jpg"
+            "SourcePath" = "8:..\\BIN\\RDLC\\消防设施设备使用登记表.rdlc"
+            "TargetName" = "8:消防设施设备使用登记表.rdlc"
             "Tag" = "8:"
-            "Folder" = "8:_4AC70A7CC73B47D7A0BC584055081664"
+            "Folder" = "8:_B86CBCA9292342668F36E3BE81C58032"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -1630,26 +1670,6 @@
             "TargetName" = "8:安全生产责任考核表.rdlc"
             "Tag" = "8:"
             "Folder" = "8:_B86CBCA9292342668F36E3BE81C58032"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_7F94CFCB9DD84ACC94C12E60D446E4B4"
-            {
-            "SourcePath" = "8:..\\BIN\\Images\\生产管理制度.jpg"
-            "TargetName" = "8:生产管理制度.jpg"
-            "Tag" = "8:"
-            "Folder" = "8:_4AC70A7CC73B47D7A0BC584055081664"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -1741,26 +1761,6 @@
             "TargetName" = "8:安全教育培训计划表.rdlc"
             "Tag" = "8:"
             "Folder" = "8:_B86CBCA9292342668F36E3BE81C58032"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_9DEBA559EFA349F4A0DC08B39586CAA3"
-            {
-            "SourcePath" = "8:..\\BIN\\Images\\背景.jpg"
-            "TargetName" = "8:背景.jpg"
-            "Tag" = "8:"
-            "Folder" = "8:_4AC70A7CC73B47D7A0BC584055081664"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -1948,46 +1948,6 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_B7FC9351B13C43589CEFAF994BC30B96"
-            {
-            "SourcePath" = "8:..\\BIN\\Images\\风险管理及事故隐患治理.jpg"
-            "TargetName" = "8:风险管理及事故隐患治理.jpg"
-            "Tag" = "8:"
-            "Folder" = "8:_4AC70A7CC73B47D7A0BC584055081664"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_B8E2E57AFB4040C1900FFA9E757F2FBB"
-            {
-            "SourcePath" = "8:..\\BIN\\Images\\安全生产费用.jpg"
-            "TargetName" = "8:安全生产费用.jpg"
-            "Tag" = "8:"
-            "Folder" = "8:_4AC70A7CC73B47D7A0BC584055081664"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_BC17CB38168B4BA2AE02BC36DC31A34F"
             {
             "SourcePath" = "8:..\\BIN\\RDLC\\三类人员台账.rdlc"
@@ -2045,6 +2005,46 @@
             "TargetName" = "8:应急救援预案演练登记表.rdlc"
             "Tag" = "8:"
             "Folder" = "8:_B86CBCA9292342668F36E3BE81C58032"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_C958C87152294339A79B4478FBEB458F"
+            {
+            "SourcePath" = "8:..\\DMSComponent\\Images\\分包管理.jpg"
+            "TargetName" = "8:分包管理.jpg"
+            "Tag" = "8:"
+            "Folder" = "8:_4AC70A7CC73B47D7A0BC584055081664"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_CF7B0DDD03BE4185A331EF621D652CD2"
+            {
+            "SourcePath" = "8:..\\DMSComponent\\Images\\背景.jpg"
+            "TargetName" = "8:背景.jpg"
+            "Tag" = "8:"
+            "Folder" = "8:_4AC70A7CC73B47D7A0BC584055081664"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -2464,7 +2464,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:DMSSetup"
         "ProductCode" = "8:{31722A27-8EA1-4BAD-82EE-4917831B555B}"
-        "PackageCode" = "8:{4A51C128-6625-4B20-AAFF-A693FEE5A18E}"
+        "PackageCode" = "8:{6B615305-4933-4190-B954-2F906D794312}"
         "UpgradeCode" = "8:{D82EE3C0-07F7-4B36-BD5C-03DAC6A3D469}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"

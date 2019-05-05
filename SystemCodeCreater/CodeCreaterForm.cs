@@ -35,5 +35,12 @@ namespace SystemCodeCreater
             this.DialogResult = DialogResult.OK;
             this.Close();
         }
+
+        private void bt_Copy_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetDataObject(textBox2.Text);
+            MessageBox.Show("已复制到剪贴板！");
+        }
+
     }
 }

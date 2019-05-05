@@ -21,8 +21,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
-        <Top>1.05516cm</Top>
-        <Left>4.91808cm</Left>
+        <Top>1.05833cm</Top>
+        <Left>4.15279cm</Left>
         <Height>1.39375cm</Height>
         <Width>8.10917cm</Width>
         <Style>
@@ -2014,7 +2014,6 @@
                     </Style>
                   </Textbox>
                   <ColSpan>3</ColSpan>
-                  <rd:Selected>true</rd:Selected>
                 </CellContents>
               </TablixCornerCell>
               <TablixCornerCell />
@@ -2025,7 +2024,7 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>0.29073cm</Width>
+              <Width>0.07938cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -2753,7 +2752,7 @@
                 </GroupExpressions>
               </Group>
               <TablixHeader>
-                <Size>1.69302cm</Size>
+                <Size>1.29085cm</Size>
                 <CellContents>
                   <Textbox Name="Textbox47">
                     <CanGrow>true</CanGrow>
@@ -2786,7 +2785,7 @@
               <TablixMembers>
                 <TablixMember>
                   <TablixHeader>
-                    <Size>2.73812cm</Size>
+                    <Size>2.33595cm</Size>
                     <CellContents>
                       <Textbox Name="Textbox55">
                         <CanGrow>true</CanGrow>
@@ -2819,7 +2818,7 @@
                   <TablixMembers>
                     <TablixMember>
                       <TablixHeader>
-                        <Size>10.88729cm</Size>
+                        <Size>9.49029cm</Size>
                         <CellContents>
                           <Textbox Name="Textbox64">
                             <CanGrow>true</CanGrow>
@@ -2852,7 +2851,7 @@
                       <TablixMembers>
                         <TablixMember>
                           <TablixHeader>
-                            <Size>2.5cm</Size>
+                            <Size>2.28802cm</Size>
                             <CellContents>
                               <Textbox Name="Textbox61">
                                 <CanGrow>true</CanGrow>
@@ -2894,10 +2893,11 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <Top>2.98662cm</Top>
+        <DataSetName>DataSet1</DataSetName>
+        <Top>3.17704cm</Top>
         <Left>0.52599cm</Left>
-        <Height>18.76094cm</Height>
-        <Width>18.10917cm</Width>
+        <Height>18.76097cm</Height>
+        <Width>15.48449cm</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -2906,10 +2906,10 @@
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>9.8295in</Height>
+    <Height>9.90447in</Height>
     <Style />
   </Body>
-  <Width>7.86793in</Width>
+  <Width>6.51167in</Width>
   <Page>
     <PageHeight>29.7cm</PageHeight>
     <PageWidth>21cm</PageWidth>
@@ -2928,6 +2928,13 @@
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
       <rd:DataSourceID>a8a4dc5b-8467-45cc-bcfb-02720871b365</rd:DataSourceID>
+    </DataSource>
+    <DataSource Name="DMSDBDataSet1">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>54e23c48-59a2-4701-8cd4-3d30026fb910</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
@@ -3024,11 +3031,31 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>DMSDBDataSet</rd:DataSetName>
-        <rd:SchemaPath>E:\项目资料\报表系统\ProjectCode20190321lf\ProjectCode20190321lf\DocumentManageSystem\SystemWindows\DMSDBDataSet.xsd</rd:SchemaPath>
+        <rd:SchemaPath>D:\test\DocumentManageSystem(0503)\SystemWindows\DMSDBDataSet.xsd</rd:SchemaPath>
         <rd:TableName>设备安全检查记录表</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
         <rd:TableAdapterName>设备安全检查记录表TableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="DataSet2">
+      <Query>
+        <DataSourceName>DMSDBDataSet1</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="单位名称">
+          <DataField>单位名称</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>DMSDBDataSet1</rd:DataSetName>
+        <rd:SchemaPath>D:\test\DocumentManageSystem(0503)\SystemWindows\DMSDBDataSet1.xsd</rd:SchemaPath>
+        <rd:TableName>用户表</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>用户表TableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>

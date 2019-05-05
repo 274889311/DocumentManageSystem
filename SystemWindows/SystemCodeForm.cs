@@ -39,10 +39,11 @@ namespace SystemWindows
 
         private void bt_OK_Click(object sender, EventArgs e)
         {
-            string systemCode = AES.AESEncrypt(SystemInformationCode.GetCpuID() + "zhangdahang");
             try
             {
-                if (AES.AESDecrypt(textBox2.Text).Equals(SystemInformationCode.GetCpuID() + "zhangdahang"))
+                //string mechineCode = "BFEBFBFF000806EA";
+                string mechineCode = SystemInformationCode.GetCpuID();
+                if (AES.AESDecrypt(textBox2.Text).Equals(mechineCode + "zhangdahang"))
                 {
                     CommonConfigurationManager.UpdateAppConfig("SystemCode", textBox2.Text);
                     this.DialogResult = DialogResult.OK;

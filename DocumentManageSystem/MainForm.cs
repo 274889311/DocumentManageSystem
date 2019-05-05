@@ -572,12 +572,16 @@ namespace DocumentManageSystem
 
             string Filter = "Excel文件|*.xls|Excel文件|*.xlsx";
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
+            openFileDialog1.InitialDirectory = Application.StartupPath + "\\OutPut\\";
+            if(!Directory.Exists(openFileDialog1.InitialDirectory))
+            {
+                Directory.CreateDirectory(openFileDialog1.InitialDirectory);
+            }
             openFileDialog1.Title = "Excel文件";
             openFileDialog1.Filter = Filter;
             openFileDialog1.ValidateNames = true;
             openFileDialog1.CheckFileExists = true;
             openFileDialog1.CheckPathExists = true;
-
             if (openFileDialog1.ShowDialog() != DialogResult.OK)
                 return;
             if(!openFileDialog1.FileName.Contains(dataEditPanel1.TableName))

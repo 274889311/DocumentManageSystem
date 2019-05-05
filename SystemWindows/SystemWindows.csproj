@@ -103,6 +103,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DMSDBDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DMSDBDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DMSDBDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DocumentViewwerForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -389,6 +394,17 @@
     </None>
     <None Include="DMSDBDataSet.xss">
       <DependentUpon>DMSDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DMSDBDataSet1.xsc">
+      <DependentUpon>DMSDBDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DMSDBDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DMSDBDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DMSDBDataSet1.xss">
+      <DependentUpon>DMSDBDataSet1.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

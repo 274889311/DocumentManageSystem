@@ -36,6 +36,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.bt_Copy = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
@@ -64,17 +65,19 @@
             // 
             this.tableLayoutPanel2.AutoSize = true;
             this.tableLayoutPanel2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.tableLayoutPanel2.ColumnCount = 2;
+            this.tableLayoutPanel2.ColumnCount = 3;
             this.tableLayoutPanel1.SetColumnSpan(this.tableLayoutPanel2, 2);
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel2.Controls.Add(this.bt_Cancel, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.bt_OK, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.bt_OK, 2, 0);
+            this.tableLayoutPanel2.Controls.Add(this.bt_Copy, 1, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 51);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(342, 48);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
@@ -82,7 +85,7 @@
             // 
             this.bt_Cancel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.bt_Cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.bt_Cancel.Location = new System.Drawing.Point(48, 12);
+            this.bt_Cancel.Location = new System.Drawing.Point(19, 12);
             this.bt_Cancel.Name = "bt_Cancel";
             this.bt_Cancel.Size = new System.Drawing.Size(75, 23);
             this.bt_Cancel.TabIndex = 0;
@@ -93,7 +96,7 @@
             // bt_OK
             // 
             this.bt_OK.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.bt_OK.Location = new System.Drawing.Point(219, 12);
+            this.bt_OK.Location = new System.Drawing.Point(246, 12);
             this.bt_OK.Name = "bt_OK";
             this.bt_OK.Size = new System.Drawing.Size(75, 23);
             this.bt_OK.TabIndex = 0;
@@ -140,6 +143,18 @@
             this.textBox2.Size = new System.Drawing.Size(285, 21);
             this.textBox2.TabIndex = 1;
             // 
+            // bt_Copy
+            // 
+            this.bt_Copy.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bt_Copy.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.bt_Copy.Location = new System.Drawing.Point(132, 12);
+            this.bt_Copy.Name = "bt_Copy";
+            this.bt_Copy.Size = new System.Drawing.Size(75, 23);
+            this.bt_Copy.TabIndex = 0;
+            this.bt_Copy.Text = "复    制";
+            this.bt_Copy.UseVisualStyleBackColor = true;
+            this.bt_Copy.Click += new System.EventHandler(this.bt_Copy_Click);
+            // 
             // CodeCreaterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -171,6 +186,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button bt_Copy;
     }
 }
 
