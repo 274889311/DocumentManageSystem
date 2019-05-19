@@ -10,6 +10,8 @@ using System.Runtime.InteropServices;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using System.Reflection;
+using NPOI.HSSF.UserModel;
+using NPOI.SS.UserModel;
 
 namespace TemplateHelper
 {
@@ -34,7 +36,70 @@ namespace TemplateHelper
 
         public TemplateExcelHelper(string filePath) : base(filePath) { }
 
-        public override void OutPut(DataTable dt)
+
+        public override void OutPut( DataTable dt)
+        {
+            string fileExt = DateTime.Now.ToString("yyyyMMddHHmmss");
+            string fileOutPut = base.m_OutputFilePath.Insert(m_OutputFilePath.LastIndexOf("."), fileExt);
+            string saveFileName = fileOutPut;
+            //SaveFileDialog saveDialog = new SaveFileDialog();
+            //saveDialog.DefaultExt = "xls";
+            //saveDialog.Filter = "Excel文件|*.xls";
+            //saveDialog.FileName = fileName;
+            //saveDialog.ShowDialog();
+            //saveFileName = saveDialog.FileName;
+
+            HSSFWorkbook workbook = new HSSFWorkbook();
+            MemoryStream ms = new MemoryStream();
+
+            Sheet sheet = workbook.CreateSheet("Sheet1");
+
+            NPOI.SS.UserModel.Row dataTableName = sheet.CreateRow(0);
+            NPOI.SS.UserModel.Cell cellTableName = dataTableName.CreateCell(0);
+            cellTableName.SetCellValue(dt.TableName);
+            //sheet.SetActiveCellRange(0, 2, 0, dt.Columns.Count);
+            int rangeID = sheet.AddMergedRegion(new NPOI.SS.Util.CellRangeAddress(0, 2, 0, dt.Columns.Count));
+            NPOI.SS.UserModel.Row dataRowColumnName = sheet.CreateRow(3);
+            for (int j = 0; j < dt.Columns.Count; j++)
+            {
+                NPOI.SS.UserModel.Cell cellName = dataRowColumnName.CreateCell(j);
+                cellName.SetCellValue(dt.Columns[j].ColumnName);
+                NPOI.SS.UserModel.Name sheetName = workbook.CreateName();
+                sheetName.NameName = dt.Columns[j].ColumnName;
+                sheetName.SheetIndex = 0;
+            }
+
+            int rowCount = dt.Rows.Count;
+            int colCount = dt.Columns.Count;
+
+            for (int i = 0; i < rowCount; i++)
+            {
+                NPOI.SS.UserModel.Row dataRow = sheet.CreateRow(4+i);
+                for (int j = 0; j < colCount; j++)
+                {
+                    NPOI.SS.UserModel.Cell cell = dataRow.CreateCell(j);
+
+                    if (dt.Rows[i][j].GetType().Equals(typeof(DateTime)))
+                        cell.SetCellValue(((DateTime)(dt.Rows[i][j])).ToString("yyyy-MM-dd HH:mm:ss"));
+                    else
+                        cell.SetCellValue( dt.Rows[i][j].ToString());//项目序号
+                }
+            }
+
+            workbook.Write(ms);
+            FileStream file = new FileStream(saveFileName, FileMode.Create);
+            workbook.Write(file);
+            file.Close();
+            workbook = null;
+            ms.Close();
+            ms.Dispose();
+
+            if (MessageBox.Show("Excel导出成功：" + fileOutPut + "\r\n是否要打开？", "提示信息", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+            {
+                System.Diagnostics.Process.Start(fileOutPut);
+            }
+        }
+        public  void OutPut2(DataTable dt)
         {
             bool isShowExcel = false;
 
@@ -205,9 +270,75 @@ namespace TemplateHelper
             ws.PageSetup.FitToPagesTall = false;
         }
 
-
-
+        /// <summary>
+        /// 将excel中的数据导入到DataTable中
+        /// </summary>
+        /// <param name="sheetName">excel工作薄sheet的名称</param>
+        /// <param name="isFirstRowColumn">第一行是否是DataTable的列名</param>
+        /// <returns>返回的DataTable</returns>
         public override DataTable InPut(string tableName, string filePath)
+        {
+            HSSFWorkbook workbook = new HSSFWorkbook();
+            MemoryStream ms = new MemoryStream();
+
+            Sheet sheet = null;
+            DataTable data = new DataTable();
+            int startRow = 0;
+            try
+            {
+                FileStream fs = new FileStream(filePath, FileMode.Open, FileAccess.Read);
+                workbook = new HSSFWorkbook(fs);
+
+                sheet = workbook.GetSheetAt(0);
+                if (sheet != null)
+                {
+                    Row firstRow = sheet.GetRow(3);
+                    int cellCount = firstRow.LastCellNum; //一行最后一个cell的编号 即总的列数
+
+
+                    for (int i = firstRow.FirstCellNum; i < cellCount; ++i)
+                    {
+                        Cell cell = firstRow.GetCell(i);
+                        if (cell != null)
+                        {
+                            string cellValue = cell.StringCellValue;
+                            if (cellValue != null)
+                            {
+                                DataColumn column = new DataColumn(cellValue);
+                                data.Columns.Add(column);
+                            }
+                        }
+                    }
+                    startRow = firstRow.RowNum + 1;
+
+
+                    //最后一列的标号
+                    int rowCount = sheet.LastRowNum;
+                    for (int i = startRow; i <= rowCount; ++i)
+                    {
+                        Row row = sheet.GetRow(i);
+                        if (row == null) continue; //没有数据的行默认是null　　　　　　　
+
+                        DataRow dataRow = data.NewRow();
+                        for (int j = row.FirstCellNum; j < cellCount; ++j)
+                        {
+                            if (row.GetCell(j) != null) //同理，没有数据的单元格都默认是null
+                                dataRow[j] = row.GetCell(j).ToString();
+                        }
+                        data.Rows.Add(dataRow);
+                    }
+                }
+                data.TableName = tableName;
+                return data;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Exception: " + ex.Message);
+                return null;
+            }
+        }
+
+        public  DataTable InPut2(string tableName, string filePath)
         {
             bool isShowExcel = false;
             DataTable dataTableResult = null;

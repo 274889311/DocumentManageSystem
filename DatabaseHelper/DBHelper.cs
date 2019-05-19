@@ -345,7 +345,7 @@ namespace DatabaseHelper
                 }
                 if (deviceTable.Rows.Count > 0 && deviceName != "")
                 {
-                    foreach (DataRow deviceRow in deviceTable.DefaultView.ToTable(true, new string[] { deviceName, row["保养时间"].ToString() }).Rows)
+                    foreach (DataRow deviceRow in deviceTable.DefaultView.ToTable(false, new string[] { deviceName, row["保养时间"].ToString() }).Rows)
                     {
                         DataRow r = deviceCareTable.NewRow();
                         r.ItemArray = new string[] { deviceRow[0].ToString(), DateTime.Parse(deviceRow[1].ToString()).AddDays(days).ToString("yyyy-MM-dd") };

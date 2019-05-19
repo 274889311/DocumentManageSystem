@@ -15,7 +15,7 @@ namespace DatabaseHelper
             if(connectionString!="")
             base.connector = new SqlConnection(connectionString);
         }
-        public override int Excute(string sql, Dictionary<string, object> files, bool bTran = false)
+        public override int Excute(string sql, Dictionary<string, object> files, bool bTran = true)
         {
             SqlCommand cmd = null;
             try

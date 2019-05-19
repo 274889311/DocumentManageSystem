@@ -13,31 +13,37 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using SystemWindows;
 
-namespace SystemWindows
+namespace DocumentManageSystem
 {
-    public partial class TableManagerForm : Form
+    public partial class TableCopyForm : Form
     {
+        public enum OperationType
+        {
+            Copy,
+            Create,
+            Modify
+        }
 
-        public TableManagerForm(string tableMode)
+        public TableCopyForm(string tableMode)
         {
             InitializeComponent();
             TableMode = tableMode;
         }
-        public TableManagerForm(string tableMode, string tableName,string templateName, bool isCopy = false) :this(tableMode)
+        public TableCopyForm(string tableMode, string tableName,string templateName, OperationType operation) :this(tableMode)
         {
             TableName = tableName;
             TemplateName = templateName;
-            IsCopy = isCopy;
+            Operation = operation;
         }
         public string TableMode;
         public string TableName;
         public string TemplateName;
-        private bool IsCopy = false;
+        OperationType Operation;
         DatabaseHelper.DBHelper helper = DatabaseHelper.DBHelper.GetDBHelper();// (DatabaseHelper.EnumDatabaseType.Access);
         private void TableManagerForm_Load(object sender, EventArgs e)
         {
             dataGridView1.AutoSize = true;
-            this.cbox_Mode.Items.AddRange(TableField.FieldTypeList.Keys.Where(k => k != TableFieldType.文档).Select(k=>k.ToString()).ToArray());
+            this.cbox_Mode.Items.AddRange(TableField.FieldTypeList.Keys.Where(k=>k!= TableFieldType.文档).Select(k=>k.ToString()).ToArray());
             this.cbox_Mode.SelectedIndex = 0;
             if (TableName != null)
             {
@@ -128,6 +134,11 @@ namespace SystemWindows
                 MessageBox.Show("请输入字段名");
                 return;
             }
+            if(tb_Caption.Text[0]<=64)
+            {
+                MessageBox.Show("不能字母或汉字以外的字符做为字段开头！");
+                return;
+            }
             TableField tf = new TableField()
             {
                 Name = tb_Caption.Text,
@@ -215,26 +226,41 @@ namespace SystemWindows
                 this.DialogResult = DialogResult.Cancel;
                 return;
             }
-            if (MessageBox.Show("是否保存？", "保存", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if(Operation == OperationType.Create)
             {
-                if (helper.ExistTable(TableName))
+                if (MessageBox.Show("是否保存？", "保存", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
-                    helper.DeleteTable(TableName);
+                    if (helper.ExistTable(TableName))
+                    {
+                        helper.DeleteTable(TableName);
+                    }
+                    helper.CreateTable(TableMode, TableName, "", GetTableFields(), false);
+                    this.DialogResult = DialogResult.OK;
                 }
-                helper.CreateTable(TableMode, TableName, "", GetTableFields(),false);
-                this.DialogResult = DialogResult.OK;
+                else
+                    this.DialogResult = DialogResult.Cancel;
+                return;
             }
-            else
-                this.DialogResult = DialogResult.Cancel;
-            return;
+
             EditNameForm tnf = new EditNameForm(TableName) { LabelTableName = "报表名称", TemplateName = TemplateName  };
             while (true)
             {
                 if (tnf.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                 {
+                    if (tnf.TableName.Trim() == "")
+                    {
+                        MessageBox.Show("请输入表名");
+                        continue;
+                    }
+                    if (tnf.TableName[0] <= 64)
+                    {
+                        MessageBox.Show("不能字母或汉字以外的字符做为表名开头！");
+                        continue;
+                    }
+
                     if (helper.ExistTable(tnf.TableName))
                     {
-                        if (IsCopy)
+                        if (Operation == OperationType.Copy)
                         {
                             MessageBox.Show("复制的新表不能与原表重名，请重新命名");
                             continue;

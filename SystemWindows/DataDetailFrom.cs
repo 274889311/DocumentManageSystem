@@ -251,7 +251,7 @@ namespace SystemWindows
         {
             ITemplateHelper templateHelper = ATemplateHelper.GetTemplateHelper(this.TableMode, Name+DataDetailTemplate);
             string[] columns = DBHelper.GetDBHelper().GetTableFields(Name + DataDetailTemplate).GetTableFields(false).Select(f => f.Name).ToArray();
-            templateHelper.OutPut(TotalDataTable.DefaultView.ToTable(true, columns));
+            templateHelper.OutPut(TotalDataTable.DefaultView.ToTable(false, columns));
         }
     }
 }

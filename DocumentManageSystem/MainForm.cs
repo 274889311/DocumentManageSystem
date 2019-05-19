@@ -275,7 +275,7 @@ namespace DocumentManageSystem
                         itemNew.Text = "新建报表";
                         itemNew.Click += (obj, ee) =>
                         {
-                            TableManagerForm tmf = new TableManagerForm(node.Text);
+                            TableCopyForm tmf = new TableCopyForm(node.Text,"","", TableCopyForm.OperationType.Create);
                             if (tmf.ShowDialog() == DialogResult.OK)
                             {
                                 LoadTableTree();
@@ -306,7 +306,7 @@ namespace DocumentManageSystem
                         itemEdit.Text = "修改报表";
                         itemEdit.Click += (obj, ee) =>
                         {
-                            TableManagerForm tmf = new TableManagerForm(node.Parent.Name, node.Name, node.Tag == null ? node.Name : node.Tag.ToString());
+                            TableCopyForm tmf = new TableCopyForm(node.Parent.Name, node.Name, node.Tag == null ? node.Name : node.Tag.ToString(), TableCopyForm.OperationType.Modify);
                             if (tmf.ShowDialog() == DialogResult.OK)
                             {
                                 LoadTableTree();
@@ -334,7 +334,7 @@ namespace DocumentManageSystem
                         itemCopy.Text = "复制报表";
                         itemCopy.Click += (obj, ee) =>
                         {
-                            TableManagerForm tmf = new TableManagerForm(node.Parent.Name, node.Name, node.Tag == null ? node.Name : node.Tag.ToString(), true);
+                            TableCopyForm tmf = new TableCopyForm(node.Parent.Name, node.Name, node.Tag == null ? node.Name : node.Tag.ToString(), TableCopyForm.OperationType.Copy);
                             if (tmf.ShowDialog() == DialogResult.OK)
                             {
                                 LoadTableTree();
@@ -550,7 +550,7 @@ namespace DocumentManageSystem
             if (tn == null || tn.Parent == null) return; 
             ITemplateHelper templateHelper = ATemplateHelper.GetTemplateHelper(tn.Parent.Text, dataEditPanel1.TableName);
              string[] columns =DBHelper.GetDBHelper().GetTableFields(dataEditPanel1.TableName).GetTableFields(false).Select(f=>f.Name).ToArray(); 
-            templateHelper.OutPut((dataEditPanel1.DataSource as DataTable).DefaultView.ToTable(true, columns));
+            templateHelper.OutPut((dataEditPanel1.DataSource as DataTable).DefaultView.ToTable(false, columns));
         }
 
         private void 数据导入ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -586,10 +586,15 @@ namespace DocumentManageSystem
                 return;
             if(!openFileDialog1.FileName.Contains(dataEditPanel1.TableName))
             {
-                MessageBox.Show("您选择的数据导入模板不正确，请重新选择！");
+                MessageBox.Show("您选择的数据导入文件不正确，请重新选择！");
                 return;
             }
             DataTable dataTable = templateHelper.InPut(dataEditPanel1.TableName, openFileDialog1.FileName);
+            if(dataTable == null)
+            {
+                MessageBox.Show("您选择的数据导入文件不正确，请重新选择！");
+                return;
+            }
             BaseFieldTable fieldTable = new BaseFieldTable(dataTable.TableName);
             foreach (DataColumn col in dataTable.Columns)
             {

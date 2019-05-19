@@ -80,12 +80,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TableManagerForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TableManagerForm.Designer.cs">
-      <DependentUpon>TableManagerForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="TableModeForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,9 +105,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="TableManagerForm.resx">
-      <DependentUpon>TableManagerForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="TableModeForm.resx">
       <DependentUpon>TableModeForm.cs</DependentUpon>
     </EmbeddedResource>

@@ -133,11 +133,11 @@
     <Compile Include="SystemCodeForm.Designer.cs">
       <DependentUpon>SystemCodeForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="TableManagerForm.cs">
+    <Compile Include="TableCopyForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TableManagerForm.Designer.cs">
-      <DependentUpon>TableManagerForm.cs</DependentUpon>
+    <Compile Include="TableCopyForm.Designer.cs">
+      <DependentUpon>TableCopyForm.cs</DependentUpon>
     </Compile>
     <Compile Include="ViewDataForm.cs">
       <SubType>Form</SubType>
@@ -332,8 +332,8 @@
     <EmbeddedResource Include="SystemCodeForm.resx">
       <DependentUpon>SystemCodeForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TableManagerForm.resx">
-      <DependentUpon>TableManagerForm.cs</DependentUpon>
+    <EmbeddedResource Include="TableCopyForm.resx">
+      <DependentUpon>TableCopyForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ViewDataForm.resx">
       <DependentUpon>ViewDataForm.cs</DependentUpon>

@@ -1,6 +1,6 @@
 ﻿namespace DocumentManageSystem
 {
-    partial class TableManagerForm
+    partial class TableCopyForm
     {
         /// <summary>
         /// Required designer variable.

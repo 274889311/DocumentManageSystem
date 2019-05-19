@@ -15,29 +15,35 @@ using SystemWindows;
 
 namespace DocumentManageSystem
 {
-    public partial class TableManagerForm : Form
+    public partial class TableCopyForm : Form
     {
+        public enum OperationType
+        {
+            Copy,
+            Create,
+            Modify
+        }
 
-        public TableManagerForm(string tableMode)
+        public TableCopyForm(string tableMode)
         {
             InitializeComponent();
             TableMode = tableMode;
         }
-        public TableManagerForm(string tableMode, string tableName,string templateName, bool isCopy = false) :this(tableMode)
+        public TableCopyForm(string tableMode, string tableName,string templateName, OperationType operation) :this(tableMode)
         {
             TableName = tableName;
             TemplateName = templateName;
-            IsCopy = isCopy;
+            Operation = operation;
         }
         public string TableMode;
         public string TableName;
         public string TemplateName;
-        private bool IsCopy = false;
+        OperationType Operation;
         DatabaseHelper.DBHelper helper = DatabaseHelper.DBHelper.GetDBHelper();// (DatabaseHelper.EnumDatabaseType.Access);
         private void TableManagerForm_Load(object sender, EventArgs e)
         {
             dataGridView1.AutoSize = true;
-            this.cbox_Mode.Items.AddRange(TableField.FieldTypeList.Keys.Select(k=>k.ToString()).ToArray());
+            this.cbox_Mode.Items.AddRange(TableField.FieldTypeList.Keys.Where(k=>k!= TableFieldType.文档).Select(k=>k.ToString()).ToArray());
             this.cbox_Mode.SelectedIndex = 0;
             if (TableName != null)
             {
@@ -57,9 +63,9 @@ namespace DocumentManageSystem
                             case "smalldatetime":
                                 colType = typeof(DateTime);
                                 break;
-                            case "image":
-                                colType = typeof(object);
-                                break;
+                            //case "image":
+                            //    colType = typeof(object);
+                            //    break;
                         }
                         DataGridViewColumn col = new DataGridViewColumn();
 
@@ -220,6 +226,21 @@ namespace DocumentManageSystem
                 this.DialogResult = DialogResult.Cancel;
                 return;
             }
+            if(Operation == OperationType.Create)
+            {
+                if (MessageBox.Show("是否保存？", "保存", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    if (helper.ExistTable(TableName))
+                    {
+                        helper.DeleteTable(TableName);
+                    }
+                    helper.CreateTable(TableMode, TableName, "", GetTableFields(), false);
+                    this.DialogResult = DialogResult.OK;
+                }
+                else
+                    this.DialogResult = DialogResult.Cancel;
+                return;
+            }
 
             EditNameForm tnf = new EditNameForm(TableName) { LabelTableName = "报表名称", TemplateName = TemplateName  };
             while (true)
@@ -239,7 +260,7 @@ namespace DocumentManageSystem
 
                     if (helper.ExistTable(tnf.TableName))
                     {
-                        if (IsCopy)
+                        if (Operation == OperationType.Copy)
                         {
                             MessageBox.Show("复制的新表不能与原表重名，请重新命名");
                             continue;

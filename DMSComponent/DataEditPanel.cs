@@ -386,7 +386,7 @@ namespace DMSComponent
                         DataTable gridTable = (DataTable)dataGridView1.DataSource;
                         var dtTemp = gridTable.DefaultView.ToTable();
                         dtTemp.DefaultView.RowFilter = valueBox.Name + " like '%" + valueBox.Text + "%'";
-                        lbx.DataSource = dtTemp.DefaultView.ToTable(true, new string[] { valueBox.Name });
+                        lbx.DataSource = dtTemp.DefaultView.ToTable(false, new string[] { valueBox.Name });
                         //lv .ValueMember = "ID";
                         lbx.DisplayMember = valueBox.Name;
                         lbx.Tag = tb;
@@ -451,7 +451,7 @@ namespace DMSComponent
                               if (lbx != null)
                               {
                                   ListBox listBox = lbx as ListBox;
-                                  listBox.DataSource = dtTemp.DefaultView.ToTable(true, new string[] { box.Name });
+                                  listBox.DataSource = dtTemp.DefaultView.ToTable(false, new string[] { box.Name });
                                   listBox.DisplayMember = box.Name;
                               }
                               DoSearch();
